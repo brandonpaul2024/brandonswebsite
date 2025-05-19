@@ -6,7 +6,7 @@ body{
     background-size: cover;
     background-position: center;
     background_attachment: fixed;
-    min-height: 100vh;
+    min-height: 10000vh;
     margin: 0;
     padding: 0;
 }
