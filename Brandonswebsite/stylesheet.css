@@ -5,7 +5,7 @@ background-image: url('Brandonswebsite/plain background.png');
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
-min-height: 100vh;
+background_attachment: fixed;
 margin: 0;
 padding: 0;
 }
