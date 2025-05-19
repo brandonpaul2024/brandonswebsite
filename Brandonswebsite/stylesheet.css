@@ -4,7 +4,8 @@ body{
 background-image: url('Brandonswebsite/plain background.png');
 background-repeat: no-repeat;
 background-size: cover;
-background-position: center center;
+background-position: center;
+min-height: 100vh;
 margin: 0;
 padding: 0;
 }
