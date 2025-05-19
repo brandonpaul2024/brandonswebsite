@@ -1,11 +1,11 @@
 /* This is the external tyle sheet*/
 
 body{
-    background-image: url('Brandonswebsite/plain background.png');
+    background-image: url('plain background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background_attachment: fixed;
+    background-attachment: fixed;
     min-height: 10000vh;
     margin: 0;
     padding: 0;
