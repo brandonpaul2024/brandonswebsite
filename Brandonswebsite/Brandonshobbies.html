@@ -71,35 +71,121 @@ Warhammer 40k Board Game
 <br>
 <p17>
 <br>Pictures of my recent paint jobs
-<br> <img src="Warhammer pic1.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic2.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic3.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic4.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic5.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic6.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic7.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic8.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic9.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic10.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic11.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic12.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic13.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic14.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic15.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic16.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic17.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic18.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic19.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic20.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic21.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic22.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic23.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic24.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic25.jpg" alt=" " width="300" height="300" align="center"/>
-<img src="Warhammer pic26.jpg" alt=" " width="300" height="300" align="center"/>
+<br>
+<div class="slider">
+  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+  <div class="slides">
+<img src="Brandonswebsite/Warhammer pic1.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic2.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic3.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic4.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic5.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic6.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic7.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic8.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic9.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic10.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic11.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic12.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic13.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic14.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic15.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic16.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic17.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic18.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic19.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic20.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic21.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic22.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic23.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic24.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic25.JPG" alt=" " />
+<img src="Brandonswebsite/Warhammer pic26.JPG" alt=" " />
+  </div>
+  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<style>
+  .slider {
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slides img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .arrow.left {
+    left: 0;
+  }
+
+  .arrow.right {
+    right: 0;
+  }
+</style>
+
+<script>
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    if (index >= totalSlides) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else {
+      currentIndex = index;
+    }
+    slides.style.transform = `translateX(-${currentIndex * 300}px)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+</script>
 </p17>
 </p6>
 </h6>
+
+<h6>
+Airsofting
+<p6>
+<br>"Who doesnt love a day of exercise and teamwork with friends.
+<br>This hobby is similar to paint ball except you are shooting little plastic bb's at the opposing players. "
+<br> <img src="Airsoft pic1.jpg" alt=" " width="300" height="300" align="center"/>
+<img src="Airsoft pic2.jpg" alt=" " width="300" height="300" align="center"/>
+<img src="Airsoft pic3.jpg" alt=" " width="300" height="300" align="center"/>
+<img src="Airsoft pic4.jpg" alt=" " width="300" height="300" align="center"/>
+</p6>
+</h6>
+
 
 <h6>
 Airsofting
