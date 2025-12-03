@@ -156,7 +156,7 @@ font-size: 14px;
 }
 
 /* Button/link styles inside ordered lists */
-ol a.pulse{
+ol a {
 display: inline-block;
 padding: 10px 20px;
 margin: 5px;
@@ -185,6 +185,7 @@ a:hover {
 a:active {
   color: #C0F0FC;
 }
+
 
 
 
