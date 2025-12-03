@@ -167,7 +167,9 @@ border-radius: 5px;
 font-size: 16px;
 text-align: center;
 cursor: pointer;
-    @keyframes pulse-glow {
+}
+
+@keyframes pulse-glow {
   0% {
     box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 0 8px rgba(124,58,237,0.2);
     transform: translateY(0);
@@ -185,7 +187,6 @@ ol a.pulse {
   animation: pulse-glow 2.6s infinite;
 }
 ol a.pulse:hover { animation-duration: 1.6s; }
-}
 
 link {
 color: white
@@ -202,4 +203,5 @@ color: #FCFC0C
 active {
 color: #C0F0FC
 }
+
 
