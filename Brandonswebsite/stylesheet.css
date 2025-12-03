@@ -1,11 +1,5 @@
 /* This is the external style sheet*/
 
-/* Define defaults for custom properties so animations/transitions have fallbacks */
-:root{
-  --transition: 220ms ease;
-  --glow-color: rgba(124,58,237,0.35); /* purple-ish glow */
-}
-
 body{
     background-image: url('plain background.png');
     background-repeat: no-repeat;
@@ -174,46 +168,8 @@ border-radius: 5px;
 font-size: 16px;
 text-align: center;
 cursor: pointer;
-
- box-shadow:
-    0 6px 18px rgba(0,0,0,0.35), /* depth shadow */
-    0 0 10px rgba(124,58,237,0.25); /* fallback glow for older browsers */
-
-  /* use fallback for --transition if not set */
-  transition: transform var(--transition, 220ms ease), box-shadow var(--transition, 220ms ease), background-color var(--transition, 220ms ease);
 }
 
-/* Pulse keyframes
-   Uses --glow-color fallback if the variable isn't set or not supported.
-   Avoids color-mix which has limited support in browsers.
-*/
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 0 8px rgba(124,58,237,0.2);
-    transform: translateY(0);
-  }
-  50% {
-    /* second shadow uses var with fallback so it's valid in more browsers */
-    box-shadow: 0 12px 30px rgba(0,0,0,0.45), 0 0 36px var(--glow-color, rgba(124,58,237,0.35));
-    transform: translateY(-3px);
-  }
-  100% {
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 0 8px rgba(124,58,237,0.2);
-    transform: translateY(0);
-  }
-}
-
-/* To enable the pulse animation add the pulse class to the element(s) you want to animate */
-ol a.pulse {
-  animation: pulse-glow 2.6s infinite;
-}
-
-/* Make hover speed quicker for pulsing items */
-ol a.pulse:hover { animation-duration: 1.6s; }
-
-/* NOTE: use pseudo-classes on anchors rather than plain tag names:
-   a:link, a:visited, a:hover, a:active. The original `link`, `visted`, etc.
-   in your file are selectors for elements named <link> and not anchor pseudo-classes. */
 a:link {
   color: white;
 }
@@ -229,6 +185,7 @@ a:hover {
 a:active {
   color: #C0F0FC;
 }
+
 
 
 
