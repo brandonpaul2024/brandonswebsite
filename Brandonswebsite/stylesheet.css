@@ -1,4 +1,4 @@
-/* This is the external style sheet*/
+/* This is the external tyle sheet*/
 
 body{
     background-image: url('plain background.png');
@@ -15,7 +15,7 @@ h1{
 background-image: url('dark blue wavy background.png');
 background-repeat: no-repeat;
 background-size: cover;
-line-height: 80px;
+line-height: 80px
 }
 
 ul {
@@ -29,7 +29,7 @@ text-align: center;
 }
 
 h1 p {
-font-size: 50px;
+font-size: 50;
 margin-top: -100px;
 margin-left: 220px;
 text-align: center;
@@ -56,82 +56,82 @@ display: block;
 
 div {
 text-align: center;
-font-size: 24px;
+font-size: 24px
 }
 
 h2{
 text-align: center;
 background-color: #808080;
-line-height: 80px;
-font-size: 20px;
+line-height: 80px
+font-size: 20px
 }
 
 h6{
 text-align: center;
-font-size: 25px;
+font-size: 25px
 }
 
 h7{
 text-align: center;
-font-size: 25px;
+font-size: 25px
 }
 
 h4{
 text-align: center;
-font-size: 40px;
+font-size: 40px
 }
 
 p5{
-font-size: 30px;
+font-size: 30px
 }
 
 p6{
-font-size: 15px;
+font-size: 15px
 }
 
 p7{
-font-size: 15px;
+font-size: 15px
 }
 
 p8{
-font-size: 30px;
+font-size: 30px
 }
 
 p9{
-font-size: 15px;
+font-size: 15px
 }
 
 p10{
-font-size: 15px;
+font-size: 15px
 }
 
 p11{
-font-size: 15px;
+font-size: 15px
 }
 
 p12{
-font-size: 15px;
+font-size: 15px
 }
 
 p13{
-font-size: 15px;
+font-size: 15px
 }
 
 p14{
-font-size: 20px;
+font-size: 20px
 }
 
 p15{
-font-size: 15px;
+font-size: 15px
 }
 
 p16{
 text-align: center;
-font-size: 20px;
+font-size: 20px
 }
 
 p17{
-font-size: 20px;
+font-size: 20px
 }
 
 h8{
@@ -152,10 +152,9 @@ display: block;
 
 ol{
 text-align: center;
-font-size: 14px;
+font-size: 14px
 }
 
-/* Button/link styles inside ordered lists */
 ol a {
 display: inline-block;
 padding: 10px 20px;
@@ -170,25 +169,18 @@ text-align: center;
 cursor: pointer;
 }
 
-a:link {
-  color: white;
+link {
+color: white
 }
 
-a:visited {
-  color: #060235;
+visted {
+color: #060235
 }
 
-a:hover {
-  color: #FCFC0C;
+hover {
+color: #FCFC0C
 }
 
-a:active {
-  color: #C0F0FC;
+active {
+color: #C0F0FC
 }
-
-
-
-
-
-
-
