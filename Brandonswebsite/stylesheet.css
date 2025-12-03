@@ -167,34 +167,7 @@ border-radius: 5px;
 font-size: 16px;
 text-align: center;
 cursor: pointer;
-
- box-shadow:
-    0 6px 18px rgba(0,0,0,0.35), /* depth shadow */
-    0 0 10px rgba(124,58,237,0.25); /* fallback glow for older browsers */
-
-  /* smoother modern glow where supported (color-mix is optional modern nicety) */
-  /* The second box-shadow is overridden on :hover for larger glow */
-  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
 }
-
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 0 8px rgba(124,58,237,0.2);
-    transform: translateY(0);
-  }
-  50% {
-    box-shadow: 0 12px 30px rgba(0,0,0,0.45), 0 0 36px color-mix(in srgb, var(--glow-color) 55%, transparent);
-    transform: translateY(-3px);
-  }
-  100% {
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 0 8px rgba(124,58,237,0.2);
-    transform: translateY(0);
-  }
-}
-ol a.pulse {
-  animation: pulse-glow 2.6s infinite;
-}
-ol a.pulse:hover { animation-duration: 1.6s; }
 
 link {
 color: white
@@ -211,6 +184,7 @@ color: #FCFC0C
 active {
 color: #C0F0FC
 }
+
 
 
 
