@@ -167,6 +167,14 @@ border-radius: 5px;
 font-size: 16px;
 text-align: center;
 cursor: pointer;
+
+ box-shadow:
+    0 6px 18px rgba(0,0,0,0.35), /* depth shadow */
+    0 0 10px rgba(124,58,237,0.25); /* fallback glow for older browsers */
+
+  /* smoother modern glow where supported (color-mix is optional modern nicety) */
+  /* The second box-shadow is overridden on :hover for larger glow */
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
 }
 
 @keyframes pulse-glow {
@@ -203,5 +211,6 @@ color: #FCFC0C
 active {
 color: #C0F0FC
 }
+
 
 
